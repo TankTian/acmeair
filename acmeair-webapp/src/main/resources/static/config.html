@@ -17,7 +17,7 @@
 <html>
 
 <head>
-  <title>Acme Air - 配置</title>
+  <title>AcmeAir - Config</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="css/themes/claro/claro.css">
@@ -217,9 +217,9 @@
 <body class="claro">
 
 <span id="variousDialogs" style="display:none">
-<div dojoType="dijit.Dialog" id="loginWaitDialog" title="请稍等">
+<div dojoType="dijit.Dialog" id="loginWaitDialog" title="Please Wait">
 		<table width="258">
-			<tr><td>登录中 ...</td></tr>
+			<tr><td>Logging in ...</td></tr>
 		</table>
 </div>
 
@@ -251,9 +251,9 @@
 </div>
 
 
-<div dojoType="dijit.Dialog" id="waitDialog" title="请稍等">
+<div dojoType="dijit.Dialog" id="waitDialog" title="Please Wait">
 		<table width="258">
-			<tr><td>等待中 ...</td></tr>
+			<tr><td>Loading...</td></tr>
 		</table>
 		
 </div>
@@ -263,7 +263,7 @@
 	<br/>
 	<header>
 		<img src="images/AcmeAir.png" alt="Acme Air"/><br/>
-		<div class="text-align: left">使用顺心航空服务，一切顺心 Flights, Baggage, and Loyalty all with a Smile</div><br/>
+		<div class="text-align: left">Flights, Baggage, and Loyalty all with a Smile</div><br/>
 	</header>
 	<div id="welcomeback"><div id="loggedinwelcome"></div>
 	</div>
@@ -273,23 +273,23 @@
 		</span>
 
 		<div id="toolbar5" data-dojo-type="dijit.Toolbar">
-			<div data-dojo-type="ToolbarSectionStart" data-dojo-props='label:"操作"'></div>
-			<div id="toolbar5.home" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='index.html'">Acme航空首页</div>
-			<div id="toolbar5.loaddb" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='loader.html'">加载数据库</div>
-			<div id="toolbar5.info" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='config.html'">运行环境信息</div>
+			<div data-dojo-type="ToolbarSectionStart" data-dojo-props='label:"Actions"'></div>
+			<div id="toolbar5.home" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='index.html'">AcmeAir Home</div>
+			<div id="toolbar5.loaddb" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='loader.html'">Load the Database</div>
+			<div id="toolbar5.info" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='config.html'">Running Env Info</div>
 		</div>
 		
 		<div class="content">
-			<h1 style="margin: 15px 0 0 0;">Acme Air 配置信息</h1>
+			<h1 style="margin: 15px 0 0 0;">AcmeAir Configuration Informations</h1>
 			
-			<h2>应用运行环境</h2>
+			<h2>Application Operating Environment</h2>
 			
 			<script type="text/javascript">
 				getRuntimeInformation();
 			</script>
 			<div id="runtimeLoc"></div>	
 			
-			<h2>可用数据服务 </h2>
+			<h2>Available data services </h2>
 			
 			<script type="text/javascript">
 				getDataServiceInformation();
@@ -302,7 +302,7 @@
 				getDBSizes();
 			</script> 
 			
-		  <h2> 数据库信息 </h2>
+		  <h2> Database Information </h2>
           <table border="1">
 		     <tr> <th>Entity</th> <th>Count</th></tr>
 		     <tr> <td>Bookings</td> <td><div id="bookingData"></div></td></tr>
@@ -317,7 +317,7 @@
 		</div>
 	</div>
 	<footer>
-		<p><a href="index.html">Acme航空首页</a></p>
+		<p><a href="index.html">AcmeAir Home</a></p>
 	</footer>
 
 </div>
