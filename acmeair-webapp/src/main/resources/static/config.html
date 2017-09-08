@@ -253,7 +253,7 @@
 
 <div dojoType="dijit.Dialog" id="waitDialog" title="Please Wait">
 		<table width="258">
-			<tr><td>Loading...</td></tr>
+			<tr><td>Please Wait...</td></tr>
 		</table>
 		
 </div>
@@ -276,20 +276,20 @@
 			<div data-dojo-type="ToolbarSectionStart" data-dojo-props='label:"Actions"'></div>
 			<div id="toolbar5.home" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='index.html'">AcmeAir Home</div>
 			<div id="toolbar5.loaddb" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='loader.html'">Load the Database</div>
-			<div id="toolbar5.info" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='config.html'">Running Env Info</div>
+			<div id="toolbar5.info" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='config.html'">Runtime Info</div>
 		</div>
 		
 		<div class="content">
-			<h1 style="margin: 15px 0 0 0;">AcmeAir Configuration Informations</h1>
+			<h1 style="margin: 15px 0 0 0;">AcmeAir Configuration Information</h1>
 			
-			<h2>Application Operating Environment</h2>
+			<h2>Application Runtime</h2>
 			
 			<script type="text/javascript">
 				getRuntimeInformation();
 			</script>
 			<div id="runtimeLoc"></div>	
 			
-			<h2>Available data services </h2>
+			<h2>Available Data Services </h2>
 			
 			<script type="text/javascript">
 				getDataServiceInformation();

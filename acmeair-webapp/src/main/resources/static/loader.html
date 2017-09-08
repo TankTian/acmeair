@@ -146,7 +146,7 @@
 
 <div dojoType="dijit.Dialog" id="waitDialog" title="Please Wait">
 		<table width="258">
-			<tr><td>Loading...</td></tr>
+			<tr><td>Please Wait...</td></tr>
 		</table>
 		
 </div>
@@ -169,20 +169,20 @@
 			<div data-dojo-type="ToolbarSectionStart" data-dojo-props='label:"Actions"'></div>
 			<div id="toolbar5.home" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='index.html'">AcmeAir Home</div>
 			<div id="toolbar5.loaddb" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='loader.html'">Load the Database</div>
-			<div id="toolbar5.info" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='config.html'">Running Env Info</div>
+			<div id="toolbar5.info" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='config.html'">Runtime Info</div>
 		</div>
 		
 		<div class="content">
-			<h1>Database Loader</h1>
+			<h1>AcmeAir Database Loader</h1>
 			<script type="text/javascript">
 				getActiveDataServiceInfo();
 			</script> 
 			<div id="activeServiceLoc"></div> 
 			<br/>
 									
-			<h2>Load the Configuration</h2>
+			<h2>Loader Configuration</h2>
 			<br/>
-      		Load user number: <input type="text" dojoType="dijit.form.TextBox" id="customerSizeInput" data-dojo-props="trim:true" required="true"></input><br/>
+      		Number of Customers to Load: <input type="text" dojoType="dijit.form.TextBox" id="customerSizeInput" data-dojo-props="trim:true" required="true"></input><br/>
       		<button dojoType="dijit.form.Button" id="loadDatabaseButton" onClick="loadDB()">Load the Database</button>
       		</br/>						
 		</div>
