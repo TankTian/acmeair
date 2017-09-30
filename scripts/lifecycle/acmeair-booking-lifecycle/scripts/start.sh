@@ -6,4 +6,4 @@ export PATH="$PATH:$JRE_HOME/bin"
 export CLASSPATH="./:$JRE_HOME/lib"
 export JAVA=$JRE_HOME/bin/java
 
-$JAVA -Dspring.profiles.active=mongodb -Dspring.data.mongodb.host=mongodb -Dspring.data.mongodb.port=32717 -jar bin/acmeair-booking-service-exec.jar
+$JAVA -Dspring.profiles.active=jpa -jar bin/acmeair-booking-service-exec.jar
