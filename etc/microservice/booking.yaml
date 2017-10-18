@@ -16,7 +16,7 @@ cse:
       Provider:
         default: tracing-provider-apm,kpi-provider-apm,bizkeeper-provider,perf-stats,tracing-provider,sla-provider,qps-flowcontrol-provider
       Consumer:
-        default: bizkeeper-consumer,loadbalance,tracing-consumer-apm,kpi-consumer-apm,perf-stats,tracing-consumer,sla-consumer,qps-flowcontrol-consumer
+        default: loadbalance,tracing-consumer-apm,kpi-consumer-apm,bizkeeper-consumer,perf-stats,tracing-consumer,sla-consumer,qps-flowcontrol-consumer
   references:
     customerServiceApp:
       version-rule: 0.0.1
