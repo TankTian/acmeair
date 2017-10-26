@@ -165,6 +165,21 @@
             </exclusion>
           </exclusions>
         </dependency>
+        <dependency>
+          <groupId>com.huawei.paas.cse</groupId>
+          <artifactId>cse-handler-tracing-apm</artifactId>
+          <version>${cse.version}</version>
+          <exclusions>
+            <exclusion>
+              <groupId>io.servicecomb</groupId>
+              <artifactId>foundation-config</artifactId>
+            </exclusion>
+            <exclusion>
+              <groupId>io.servicecomb</groupId>
+              <artifactId>java-chassis-core</artifactId>
+            </exclusion>
+          </exclusions>
+        </dependency>
       </dependencies>
 
       <repositories>
