@@ -6,4 +6,5 @@ export PATH="$PATH:$JRE_HOME/bin"
 export CLASSPATH="./:$JRE_HOME/lib"
 export JAVA=$JRE_HOME/bin/java
 
-$JAVA -Dspring.profiles.active=sc -jar bin/acmeair-webapp-exec.jar
+nohup $JAVA -Dspring.profiles.active=sc -jar bin/acmeair-webapp-exec.jar > $CURDIR/webapp.log 2>&1 &
+exit 0
