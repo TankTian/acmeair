@@ -16,7 +16,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Acme Air - 加载</title>
+  <title>Huawei Air - Loader</title>
   <meta charset="UTF-8">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -109,9 +109,9 @@
 </head>
 <body class="claro">
 <span id="variousDialogs" style="display:none">
-<div dojoType="dijit.Dialog" id="loginWaitDialog" title="稍等">
+<div dojoType="dijit.Dialog" id="loginWaitDialog" title="Please Wait">
 		<table width="258">
-			<tr><td>登录中 ...</td></tr>
+			<tr><td>Logging in ...</td></tr>
 		</table>
 </div>
 
@@ -143,9 +143,9 @@
 </div>
 
 
-<div dojoType="dijit.Dialog" id="waitDialog" title="稍等">
+<div dojoType="dijit.Dialog" id="waitDialog" title="Please Wait">
 		<table width="258">
-			<tr><td>等待中 ...</td></tr>
+			<tr><td>Please Wait...</td></tr>
 		</table>
 		
 </div>
@@ -154,8 +154,9 @@
 <div id="main">
 	<br/>
 	<header>
-		<img src="images/AcmeAir.png" alt="Acme Air"/><br/>
-		<div class="text-align: left">使用顺心航空服务，一切顺心 Flights, Baggage, and Loyalty all with a Smile</div><br/>
+		<br/><br/><br/>
+		<img src="images/Huawei Air.png" alt="Huawei Air"/><br/><br/>
+		<div class="text-align: left">Our commitment, your pursuit.</div><br/>
 	</header>
 	<div id="welcomeback"><div id="loggedinwelcome"></div>
 	</div>
@@ -166,28 +167,28 @@
 
 		<div id="toolbar5" data-dojo-type="dijit.Toolbar">
 			<div data-dojo-type="ToolbarSectionStart" data-dojo-props='label:"Actions"'></div>
-			<div id="toolbar5.home" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='index.html'">Acme航空首页</div>
-			<div id="toolbar5.loaddb" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='loader.html'">加载数据库</div>
-			<div id="toolbar5.info" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='config.html'">运行环境信息</div>
+			<div id="toolbar5.home" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='index.html'">Huawei Air Home</div>
+			<div id="toolbar5.loaddb" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='loader.html'">Load the Database</div>
+			<div id="toolbar5.info" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='config.html'">Runtime Info</div>
 		</div>
 		
 		<div class="content">
-			<h1>数据库加载器</h1>
+			<h1>Huawei Air Database Loader</h1>
 			<script type="text/javascript">
 				getActiveDataServiceInfo();
 			</script> 
 			<div id="activeServiceLoc"></div> 
 			<br/>
 									
-			<h2>加载配置 </h2>
+			<h2>Loader Configuration</h2>
 			<br/>
-      		加载用户数目: <input type="text" dojoType="dijit.form.TextBox" id="customerSizeInput" data-dojo-props="trim:true" required="true"></input><br/>
+      		Number of Customers to Load: <input type="text" dojoType="dijit.form.TextBox" id="customerSizeInput" data-dojo-props="trim:true" required="true"></input><br/>
       		<button dojoType="dijit.form.Button" id="loadDatabaseButton" onClick="loadDB()">Load the Database</button>
       		</br/>						
 		</div>
 	</div>
 	<footer>
-		<p><a href="index.html">Acme航空首页</a></p>
+		<p><a href="index.html">Huawei Air Home</a></p>
 	</footer>
 </div>
 
