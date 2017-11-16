@@ -186,7 +186,7 @@
         <repository>
           <id>huawei_cloud_cse_dependencies</id>
           <name>huawei_cloud_cse_dependencies</name>
-          <url>http://cse.servicecomb.io/maven</url>
+          <url>http://117.78.31.114:32700/nexus/content/repositories/cse</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -199,7 +199,7 @@
         <pluginRepository>
           <id>huawei_cloud_cse_dependencies</id>
           <name>huawei_cloud_cse_dependencies</name>
-          <url>http://cse.servicecomb.io/maven</url>
+          <url>http://117.78.31.114:32700/nexus/content/repositories/cse</url>
           <releases>
             <enabled>true</enabled>
           </releases>
