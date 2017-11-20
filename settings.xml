@@ -154,6 +154,12 @@ under the License.
       <name>Human Readable Name for this Mirror.</name>
       <url>http://my.repository.com/repo/path</url>
     </mirror>-->
+    <mirror>
+      <id>mirrorId</id>
+      <mirrorOf>central</mirrorOf>
+      <name>Mirror of central repository.</name>
+      <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+    </mirror>
   </mirrors>
 
   <!-- profiles
