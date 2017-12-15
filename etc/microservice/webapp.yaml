@@ -5,10 +5,12 @@ service_description:
 cse:
   service:
     registry:
-      address: https://100.125.1.34:30100
+      address: https://cse.cn-north-1.myhwclouds.com:443
+      instance:
+        watch: false
   monitor:
     client:
-      serverUri: https://100.125.1.34:30109
+      serverUri: https://cse.cn-north-1.myhwclouds.com:443
   handler:
     chain:
       Provider:
@@ -20,7 +22,9 @@ cse:
     samplingRate: 0.5
   config:
     client:
-      serverUri: https://100.125.1.34:30103
+      serverUri: https://cse.cn-north-1.myhwclouds.com:443
+      refreshMode: 1
+      refresh_interval: 5000
   isolation:
     bookingServiceApp:
       timeoutInMilliseconds: 30000
@@ -28,3 +32,7 @@ cse:
       timeoutInMilliseconds: 30000
     validateCustomerSession:
       timeoutInMilliseconds: 30000
+  credentials:
+    accessKey: ak
+    secretKey: sk
+    akskCustomCipher: default
