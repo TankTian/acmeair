@@ -186,7 +186,7 @@
         <repository>
           <id>huawei_cloud_cse_dependencies</id>
           <name>huawei_cloud_cse_dependencies</name>
-          <url>http://117.78.31.114:32700/nexus/content/repositories/cse</url>
+          <url>http://maven.huaweicse.cn/nexus/content/groups/public</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -199,7 +199,7 @@
         <pluginRepository>
           <id>huawei_cloud_cse_dependencies</id>
           <name>huawei_cloud_cse_dependencies</name>
-          <url>http://117.78.31.114:32700/nexus/content/repositories/cse</url>
+          <url>http://maven.huaweicse.cn/nexus/content/groups/public</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -245,9 +245,9 @@
     <pact.version>3.2.13</pact.version>
     <swagger.version>1.5.12</swagger.version>
     <acmeair.version>2.0.0-SNAPSHOT</acmeair.version>
-    <servicecomb.version>0.2.0</servicecomb.version>
+    <servicecomb.version>0.4.0</servicecomb.version>
     <!-- CSE the commercial extendsion of HuaweiCloud -->
-    <cse.version>2.1.12</cse.version>
+    <cse.version>2.2.7</cse.version>
   </properties>
 
     <dependencyManagement>
