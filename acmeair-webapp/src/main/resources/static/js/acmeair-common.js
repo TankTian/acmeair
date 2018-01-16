@@ -90,6 +90,7 @@ function logout() {
 			login: loggedinuser
 		},
 		url: 'customers/rest/api/login/logout',
+		handleAs: "json",
 		load: function(response, ioArgs) {
 			if (response != 'logged out') {
 				// TODO: why isn't error function being called in this case
