@@ -264,7 +264,7 @@
 			return;
 		}
 		var grid = dijit.byId("gridOutbound");
-		var toFlightId = grid.store.getValue(grid.getItem(selectedIndexForToFlights), "_id");
+		var toFlightId = grid.store.getValue(grid.getItem(selectedIndexForToFlights), "id");
 		var toFlightSegId = grid.store.getValue(grid.getItem(selectedIndexForToFlights), "flightSegmentId");
 		var toScheduledDepartureTime = grid.store.getValue(grid.getItem(selectedIndexForToFlights), "scheduledDepartureTime");
 		var toScheduledArrivalTime = grid.store.getValue(grid.getItem(selectedIndexForToFlights), "scheduledArrivalTime");
@@ -278,7 +278,7 @@
 				return;
 			}
 			var grid = dijit.byId("gridReturn");
-			retFlightId = grid.store.getValue(grid.getItem(selectedIndexForRetFlights), "_id");			
+			retFlightId = grid.store.getValue(grid.getItem(selectedIndexForRetFlights), "id");			
 			retFlightSegId = grid.store.getValue(grid.getItem(selectedIndexForRetFlights), "flightSegmentId");
 			var retScheduledDepartureTime = grid.store.getValue(grid.getItem(selectedIndexForToFlights), "scheduledDepartureTime");
 			var retScheduledArrivalTime = grid.store.getValue(grid.getItem(selectedIndexForToFlights), "scheduledArrivalTime");

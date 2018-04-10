@@ -72,7 +72,7 @@
     function loadLoaderConfigData() {
     	dojo.xhrGet({
 			url: bookingsPath.concat(basePath.concat('loader/query')),
-			handleAs: "text",
+			handleAs: "json",
 			load: function(response, ioArgs) {
 				updateFormData(response);
 			},

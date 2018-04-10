@@ -22,7 +22,7 @@ import java.util.Objects;
 
 public class FlightSegmentInfo {
 
-	private String _id;
+	private String id;
 	private String originPort;
 	private String destPort;
 	private int miles;
@@ -31,17 +31,17 @@ public class FlightSegmentInfo {
 		
 	}
 	public FlightSegmentInfo(FlightSegment flightSegment) {
-		this._id = flightSegment.getFlightName();
+		this.id = flightSegment.getFlightName();
 		this.originPort = flightSegment.getOriginPort();
 		this.destPort = flightSegment.getDestPort();
 		this.miles = flightSegment.getMiles();
 	}
 	
-	public String get_id() {
-		return _id;
+	public String getId() {
+		return id;
 	}
-	public void set_id(String _id) {
-		this._id = _id;
+	public void setId(String Id) {
+		this.id = Id;
 	}
 	public String getOriginPort() {
 		return originPort;
@@ -68,7 +68,7 @@ public class FlightSegmentInfo {
 		if (o == null || getClass() != o.getClass()) return false;
 		FlightSegmentInfo that = (FlightSegmentInfo) o;
 		return miles == that.miles &&
-				Objects.equals(_id, that._id) &&
+				Objects.equals(id, that.id) &&
 				Objects.equals(originPort, that.originPort) &&
 				Objects.equals(destPort, that.destPort);
 	}
@@ -76,7 +76,7 @@ public class FlightSegmentInfo {
 	@Override
 	public String toString() {
 		return "FlightSegmentInfo{" +
-				"_id='" + _id + '\'' +
+				"Id='" + id + '\'' +
 				", originPort='" + originPort + '\'' +
 				", destPort='" + destPort + '\'' +
 				", miles=" + miles +
