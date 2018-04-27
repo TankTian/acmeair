@@ -165,7 +165,7 @@
             </exclusion>
           </exclusions>
         </dependency>
-        <dependency>
+        <!--<dependency>
           <groupId>com.huawei.paas.cse</groupId>
           <artifactId>cse-handler-tracing-apm</artifactId>
           <version>${cse.version}</version>
@@ -179,7 +179,7 @@
               <artifactId>java-chassis-core</artifactId>
             </exclusion>
           </exclusions>
-        </dependency>
+        </dependency>-->
       </dependencies>
 
       <repositories>
