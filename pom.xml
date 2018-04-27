@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2017 Huawei Technologies Co., Ltd
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -150,13 +165,28 @@
             </exclusion>
           </exclusions>
         </dependency>
+        <dependency>
+          <groupId>com.huawei.paas.cse</groupId>
+          <artifactId>cse-handler-tracing-apm</artifactId>
+          <version>${cse.version}</version>
+          <exclusions>
+            <exclusion>
+              <groupId>io.servicecomb</groupId>
+              <artifactId>foundation-config</artifactId>
+            </exclusion>
+            <exclusion>
+              <groupId>io.servicecomb</groupId>
+              <artifactId>java-chassis-core</artifactId>
+            </exclusion>
+          </exclusions>
+        </dependency>
       </dependencies>
 
       <repositories>
         <repository>
           <id>huawei_cloud_cse_dependencies</id>
           <name>huawei_cloud_cse_dependencies</name>
-          <url>http://cse.servicecomb.io/maven</url>
+          <url>http://maven.huaweicse.com/nexus/content/groups/public</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -169,7 +199,7 @@
         <pluginRepository>
           <id>huawei_cloud_cse_dependencies</id>
           <name>huawei_cloud_cse_dependencies</name>
-          <url>http://cse.servicecomb.io/maven</url>
+          <url>http://maven.huaweicse.com/nexus/content/groups/public</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -215,9 +245,9 @@
     <pact.version>3.2.13</pact.version>
     <swagger.version>1.5.12</swagger.version>
     <acmeair.version>2.0.0-SNAPSHOT</acmeair.version>
-    <servicecomb.version>0.2.0</servicecomb.version>
+    <servicecomb.version>0.4.0</servicecomb.version>
     <!-- CSE the commercial extendsion of HuaweiCloud -->
-    <cse.version>2.1.12</cse.version>
+    <cse.version>2.2.7</cse.version>
   </properties>
 
     <dependencyManagement>

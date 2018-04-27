@@ -1,5 +1,6 @@
 <!-- ***************************************************************************
 * Copyright (c) 2015 IBM Corp.
+* Copyright 2017 Huawei Technologies Co., Ltd
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -13,10 +14,11 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 **************************************************************************** -->
+<!-- this sourcecode is modified by Huawei Technologies Co., Ltd. -->
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AcmeAir - Loader</title>
+  <title>Huawei Air - Loader</title>
   <meta charset="UTF-8">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -70,7 +72,7 @@
     function loadLoaderConfigData() {
     	dojo.xhrGet({
 			url: bookingsPath.concat(basePath.concat('loader/query')),
-			handleAs: "text",
+			handleAs: "json",
 			load: function(response, ioArgs) {
 				updateFormData(response);
 			},
@@ -155,8 +157,9 @@
 <div id="main">
 	<br/>
 	<header>
-		<img src="images/AcmeAir.png" alt="Acme Air"/><br/>
-		<div class="text-align: left">Flights, Baggage, and Loyalty all with a Smile</div><br/>
+		<br/><br/><br/>
+		<img src="images/Huawei Air.png" alt="Huawei Air"/><br/><br/>
+		<div class="text-align: left">Our commitment, your pursuit.</div><br/>
 	</header>
 	<div id="welcomeback"><div id="loggedinwelcome"></div>
 	</div>
@@ -167,13 +170,13 @@
 
 		<div id="toolbar5" data-dojo-type="dijit.Toolbar">
 			<div data-dojo-type="ToolbarSectionStart" data-dojo-props='label:"Actions"'></div>
-			<div id="toolbar5.home" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='index.html'">AcmeAir Home</div>
+			<div id="toolbar5.home" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='index.html'">Huawei Air Home</div>
 			<div id="toolbar5.loaddb" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='loader.html'">Load the Database</div>
 			<div id="toolbar5.info" data-dojo-type="dijit.form.Button" data-dojo-props='showLabel:true' onClick="window.location='config.html'">Runtime Info</div>
 		</div>
 		
 		<div class="content">
-			<h1>AcmeAir Database Loader</h1>
+			<h1>Huawei Air Database Loader</h1>
 			<script type="text/javascript">
 				getActiveDataServiceInfo();
 			</script> 
@@ -188,7 +191,7 @@
 		</div>
 	</div>
 	<footer>
-		<p><a href="index.html">AcmeAir Home</a></p>
+		<p><a href="index.html">Huawei Air Home</a></p>
 	</footer>
 </div>
 

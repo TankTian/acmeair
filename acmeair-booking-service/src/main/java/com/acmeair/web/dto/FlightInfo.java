@@ -1,3 +1,19 @@
+/*******************************************************************************
+* Copyright 2017 Huawei Technologies Co., Ltd
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*    http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*******************************************************************************/
+// this sourcecode is modified by Huawei Technologies Co., Ltd.
 package com.acmeair.web.dto;
 
 import java.math.BigDecimal;
@@ -15,8 +31,8 @@ import com.acmeair.entities.Flight;
 @XmlRootElement(name="Flight")
 public class FlightInfo {
 	
-	@XmlElement(name="_id")
-	private String _id;	
+	@XmlElement(name="id")
+	private String id;	
 	private String flightSegmentId;		
 	private Date scheduledDepartureTime;
 	private Date scheduledArrivalTime;
@@ -35,7 +51,7 @@ public class FlightInfo {
 	}
 	
 	public FlightInfo(Flight flight){
-		this._id = flight.getFlightId();
+		this.id = flight.getFlightId();
 		this.flightSegmentId = flight.getFlightSegmentId();
 		this.scheduledDepartureTime = flight.getScheduledDepartureTime();
 		this.scheduledArrivalTime = flight.getScheduledArrivalTime();
@@ -49,14 +65,14 @@ public class FlightInfo {
 		} else {
 			this.flightSegment = null;
 		}
-		this.pkey = new FlightPKInfo(this.flightSegmentId, this._id);
+		this.pkey = new FlightPKInfo(this.flightSegmentId, this.id);
 	}
 	
-	public String get_id() {
-		return _id;
+	public String getId() {
+		return id;
 	}
-	public void set_id(String _id) {
-		this._id = _id;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getFlightSegmentId() {
 		return flightSegmentId;
@@ -123,7 +139,7 @@ public class FlightInfo {
 		FlightInfo that = (FlightInfo) o;
 		return numFirstClassSeats == that.numFirstClassSeats &&
 				numEconomyClassSeats == that.numEconomyClassSeats &&
-				Objects.equals(_id, that._id) &&
+				Objects.equals(id, that.id) &&
 				Objects.equals(flightSegmentId, that.flightSegmentId) &&
 				Objects.equals(scheduledDepartureTime, that.scheduledDepartureTime) &&
 				Objects.equals(scheduledArrivalTime, that.scheduledArrivalTime) &&
@@ -137,7 +153,7 @@ public class FlightInfo {
 	@Override
 	public String toString() {
 		return "FlightInfo{" +
-				"_id='" + _id + '\'' +
+				"id='" + id + '\'' +
 				", flightSegmentId='" + flightSegmentId + '\'' +
 				", scheduledDepartureTime=" + scheduledDepartureTime +
 				", scheduledArrivalTime=" + scheduledArrivalTime +

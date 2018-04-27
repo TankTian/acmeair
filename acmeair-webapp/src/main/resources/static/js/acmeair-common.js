@@ -1,5 +1,6 @@
 /*******************************************************************************
 * Copyright (c) 2013-2015 IBM Corp.
+* Copyright 2017 Huawei Technologies Co., Ltd
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -13,6 +14,7 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 *******************************************************************************/
+// this sourcecode is modified by Huawei Technologies Co., Ltd.
 function showLoginDialog() {
 	dijit.byId('loginDialog').show();
 }
@@ -88,6 +90,7 @@ function logout() {
 			login: loggedinuser
 		},
 		url: 'customers/rest/api/login/logout',
+		handleAs: "json",
 		load: function(response, ioArgs) {
 			if (response != 'logged out') {
 				// TODO: why isn't error function being called in this case
