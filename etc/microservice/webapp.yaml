@@ -19,7 +19,8 @@ cse:
         default: loadbalance,bizkeeper-consumer,perf-stats,tracing-consumer,sla-consumer,qps-flowcontrol-consumer
   tracing:
     enabled: true
-    samplingRate: 0.5  config:
+    samplingRate: 0.5  
+  config:
     client:
       serverUri: https://cse.cn-north-1.myhwclouds.com:443
       refreshMode: 1
