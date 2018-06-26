@@ -35,13 +35,22 @@ inputs:
     description: website服务对外暴露访问端口
     label: huaweiair
     type: integer
-mappings:
-  region_map:
-    cn-north-1:
-      booking-image: '100.125.0.198:20202/servicestage/huaweiair-booking-service:0.1.1'
-      customer-image: '100.125.0.198:20202/servicestage/huaweiair-customer-service:0.1.1'
-      mongo-image: '100.125.0.198:20202/servicestage/mongo:1.0.0'
-      website-image: '100.125.0.198:20202/servicestage/huaweiair-website:0.1.1'
+  customer_image:
+    default: '100.125.0.198:20202/servicestage/huaweiair-customer-service:0.1.1'
+    description: customer服务镜像地址
+    label: huaweiair
+  booking_image:
+    default: '100.125.0.198:20202/servicestage/huaweiair-booking-service:0.1.1'
+    description: booking服务镜像地址
+    label: huaweiair
+  website_image:
+    default: '100.125.0.198:20202/servicestage/huaweiair-website:0.1.1'
+    description: wwebsite服务镜像地址
+    label: huaweiair
+  mmongo_image:
+    default: '100.125.0.198:20202/servicestage/mongo:1.0.0'
+    description: mongodb镜像地址
+    label: mongodb
 metadata:
   Designer:
     4cc6d116-ee2c-44ab-b88a-2c7bc7022766:
@@ -114,49 +123,49 @@ metadata:
       z: 1
       dependson:
         - f4b5614f-4ee5-44a6-a1bb-03d76f981892
-    aee53b3e-05a8-49a7-b826-28211a224a9c:
+    1ba5de04-3150-4b25-8762-bf109262c376:
       source:
         id: eb7f2925-4a36-4612-9cab-379154e7f0b9
       target:
         id: f4b5614f-4ee5-44a6-a1bb-03d76f981892
       z: 1
-    3c5e6648-ddba-4d07-92f6-072430fdd9f2:
+    b0ad9d29-6234-42fe-97a4-550971fe7106:
       source:
         id: e5d7b724-a065-4684-be1c-49994270db82
       target:
         id: eb7f2925-4a36-4612-9cab-379154e7f0b9
       z: 1
-    2ef48588-237b-48e0-8537-4089b25b3ee8:
+    82774f9b-d339-4b49-84c9-109efa9879c0:
       source:
         id: f941b656-a0a1-41b4-a6de-3533427acbc7
       target:
         id: f4b5614f-4ee5-44a6-a1bb-03d76f981892
       z: 1
-    3494a49d-bf02-45ab-8d10-3a06fde603f6:
+    c803e53f-83a2-48cc-942b-d11bde57edf5:
       source:
         id: 6c6bb9f7-24b5-4a11-87cb-8bfbff9764a7
       target:
         id: f941b656-a0a1-41b4-a6de-3533427acbc7
       z: 1
-    b26e17f9-d96c-474f-85b4-760d8e25c70a:
+    f419d825-0095-45bb-9a93-bd9127f6818c:
       source:
         id: 4cc6d116-ee2c-44ab-b88a-2c7bc7022766
       target:
         id: f4b5614f-4ee5-44a6-a1bb-03d76f981892
       z: 1
-    525275af-a30b-40d5-bc64-1073e99982a8:
+    84cd0814-bc48-4b6e-b940-5f93d69c53ef:
       source:
         id: 4cc6d116-ee2c-44ab-b88a-2c7bc7022766
       target:
         id: 6c6bb9f7-24b5-4a11-87cb-8bfbff9764a7
       z: 1
-    8c24c709-b050-4306-9b8b-9417b677ad83:
+    1efaf2cc-8d5d-440d-b16a-92b424485d0f:
       source:
         id: e3b32c8b-3970-47f9-b298-991fda2a1499
       target:
         id: f4b5614f-4ee5-44a6-a1bb-03d76f981892
       z: 1
-    903a201d-7a00-44a4-b25b-9c7e1a47f527:
+    d27f278f-9899-4072-b43c-3a6a63ced10d:
       source:
         id: e3b32c8b-3970-47f9-b298-991fda2a1499
       target:
@@ -244,10 +253,7 @@ node_templates:
                               - huaweiair-config
                               - refName
                   image:
-                    get_in_map:
-                      - region_map
-                      - get_input: HuaweiCloud.Region
-                      - booking-image
+                    get_input: booking_image
                   name: booking-container
               imagePullSecrets:
                 - name: default-secret
@@ -311,10 +317,7 @@ node_templates:
                               - huaweiair-config
                               - refName
                   image:
-                    get_in_map:
-                      - region_map
-                      - get_input: HuaweiCloud.Region
-                      - customer-image
+                    get_input: customer_image
                   name: customer-container
               imagePullSecrets:
                 - name: default-secret
@@ -374,10 +377,7 @@ node_templates:
             spec:
               containers:
                 - image:
-                    get_in_map:
-                      - region_map
-                      - get_input: HuaweiCloud.Region
-                      - mongo-image
+                    get_input: mmongo_image
                   name: mongo-container
               imagePullSecrets:
                 - name: default-secret
@@ -462,10 +462,7 @@ node_templates:
                     - name: JAVA_OPTS
                       value: '-Dspring.profiles.active=sc'
                   image:
-                    get_in_map:
-                      - region_map
-                      - get_input: HuaweiCloud.Region
-                      - website-image
+                    get_input: website_image
                   name: website-container
                   ports:
                     - containerPort: 8080
