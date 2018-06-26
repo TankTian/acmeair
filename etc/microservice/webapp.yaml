@@ -14,9 +14,9 @@ cse:
   handler:
     chain:
       Provider:
-        default: tracing-provider-apm,kpi-provider-apm,bizkeeper-provider,perf-stats,tracing-provider,sla-provider,qps-flowcontrol-provider
+        default: bizkeeper-provider,perf-stats,tracing-provider,sla-provider,qps-flowcontrol-provider
       Consumer:
-        default: loadbalance,tracing-consumer-apm,kpi-consumer-apm,bizkeeper-consumer,perf-stats,tracing-consumer,sla-consumer,qps-flowcontrol-consumer
+        default: loadbalance,bizkeeper-consumer,perf-stats,tracing-consumer,sla-consumer,qps-flowcontrol-consumer
   tracing:
     enabled: true
     samplingRate: 0.5

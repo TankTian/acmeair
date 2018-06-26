@@ -1,0 +1,511 @@
+inputs:
+  booking_name:
+    default: huaweiair-booking
+    description: booking服务名称
+    label: huaweiair
+  customer_name:
+    default: huaweiair-customer
+    description: customer服务名称
+    label: huaweiair
+  appId:
+    default: acmeair
+    description: 默认应用名称
+    label: huaweiair
+  AK:
+    description: 租户ak
+    label: huaweiair
+  mongo_port:
+    default: 32717
+    description: mongodb对外暴露访问端口
+    label: mongodb
+    type: integer
+  SK:
+    description: 租户sk
+    label: huaweiair
+  mongo_name:
+    default: mongodb
+    description: mongodb服务名称
+    label: mongodb
+  website_name:
+    default: huaweiair-website
+    description: website服务名称
+    label: huaweiair
+  website_port:
+    default: 30100
+    description: website服务对外暴露访问端口
+    label: huaweiair
+    type: integer
+mappings:
+  region_map:
+    cn-north-1:
+      booking-image: '100.125.0.198:20202/servicestage/huaweiair-booking-service:0.1.1'
+      customer-image: '100.125.0.198:20202/servicestage/huaweiair-customer-service:0.1.1'
+      mongo-image: '100.125.0.198:20202/servicestage/mongo:1.0.0'
+      website-image: '100.125.0.198:20202/servicestage/huaweiair-website:0.1.1'
+metadata:
+  Designer:
+    4cc6d116-ee2c-44ab-b88a-2c7bc7022766:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 310
+        y: 90
+      z: 1
+      dependson:
+        - 6c6bb9f7-24b5-4a11-87cb-8bfbff9764a7
+        - f4b5614f-4ee5-44a6-a1bb-03d76f981892
+    6c6bb9f7-24b5-4a11-87cb-8bfbff9764a7:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 220
+        y: 40
+      z: 1
+      dependson:
+        - f941b656-a0a1-41b4-a6de-3533427acbc7
+    e3b32c8b-3970-47f9-b298-991fda2a1499:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 220
+        y: 140
+      z: 1
+      dependson:
+        - f4b5614f-4ee5-44a6-a1bb-03d76f981892
+        - 6c6bb9f7-24b5-4a11-87cb-8bfbff9764a7
+    e5d7b724-a065-4684-be1c-49994270db82:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 170
+        y: 210
+      z: 1
+      dependson:
+        - eb7f2925-4a36-4612-9cab-379154e7f0b9
+    eb7f2925-4a36-4612-9cab-379154e7f0b9:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 60
+        y: 210
+      z: 1
+      dependson:
+        - f4b5614f-4ee5-44a6-a1bb-03d76f981892
+    f4b5614f-4ee5-44a6-a1bb-03d76f981892:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 0
+        y: 40
+      z: 1
+    f941b656-a0a1-41b4-a6de-3533427acbc7:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 110
+        y: 40
+      z: 1
+      dependson:
+        - f4b5614f-4ee5-44a6-a1bb-03d76f981892
+    aee53b3e-05a8-49a7-b826-28211a224a9c:
+      source:
+        id: eb7f2925-4a36-4612-9cab-379154e7f0b9
+      target:
+        id: f4b5614f-4ee5-44a6-a1bb-03d76f981892
+      z: 1
+    3c5e6648-ddba-4d07-92f6-072430fdd9f2:
+      source:
+        id: e5d7b724-a065-4684-be1c-49994270db82
+      target:
+        id: eb7f2925-4a36-4612-9cab-379154e7f0b9
+      z: 1
+    2ef48588-237b-48e0-8537-4089b25b3ee8:
+      source:
+        id: f941b656-a0a1-41b4-a6de-3533427acbc7
+      target:
+        id: f4b5614f-4ee5-44a6-a1bb-03d76f981892
+      z: 1
+    3494a49d-bf02-45ab-8d10-3a06fde603f6:
+      source:
+        id: 6c6bb9f7-24b5-4a11-87cb-8bfbff9764a7
+      target:
+        id: f941b656-a0a1-41b4-a6de-3533427acbc7
+      z: 1
+    b26e17f9-d96c-474f-85b4-760d8e25c70a:
+      source:
+        id: 4cc6d116-ee2c-44ab-b88a-2c7bc7022766
+      target:
+        id: f4b5614f-4ee5-44a6-a1bb-03d76f981892
+      z: 1
+    525275af-a30b-40d5-bc64-1073e99982a8:
+      source:
+        id: 4cc6d116-ee2c-44ab-b88a-2c7bc7022766
+      target:
+        id: 6c6bb9f7-24b5-4a11-87cb-8bfbff9764a7
+      z: 1
+    8c24c709-b050-4306-9b8b-9417b677ad83:
+      source:
+        id: e3b32c8b-3970-47f9-b298-991fda2a1499
+      target:
+        id: f4b5614f-4ee5-44a6-a1bb-03d76f981892
+      z: 1
+    903a201d-7a00-44a4-b25b-9c7e1a47f527:
+      source:
+        id: e3b32c8b-3970-47f9-b298-991fda2a1499
+      target:
+        id: 6c6bb9f7-24b5-4a11-87cb-8bfbff9764a7
+      z: 1
+  relationships:
+    4cc6d116-ee2c-44ab-b88a-2c7bc7022766:
+      references:
+        dependency:
+          - get_reference: huaweiair-config
+          - get_reference: mongo-service
+    6c6bb9f7-24b5-4a11-87cb-8bfbff9764a7:
+      references:
+        dependency:
+          - get_reference: mongo
+    e3b32c8b-3970-47f9-b298-991fda2a1499:
+      references:
+        dependency:
+          - get_reference: huaweiair-config
+          - get_reference: mongo-service
+    e5d7b724-a065-4684-be1c-49994270db82:
+      references:
+        dependency:
+          - get_reference: website
+    eb7f2925-4a36-4612-9cab-379154e7f0b9:
+      references:
+        dependency:
+          - get_reference: huaweiair-config
+    f941b656-a0a1-41b4-a6de-3533427acbc7:
+      references:
+        dependency:
+          get_reference: huaweiair-config
+node_templates:
+  booking:
+    metadata:
+      Designer:
+        id: e3b32c8b-3970-47f9-b298-991fda2a1499
+    properties:
+      k8sManifest:
+        apiVersion: apps/v1
+        kind: Deployment
+        metadata:
+          labels:
+            get_input: booking_name
+          name:
+            get_input: booking_name
+        spec:
+          replicas: 1
+          selector:
+            matchLabels:
+              app:
+                get_input: booking_name
+          template:
+            metadata:
+              labels:
+                app:
+                  get_input: booking_name
+            spec:
+              containers:
+                - env:
+                    - name: AK
+                      valueFrom:
+                        configMapKeyRef:
+                          key: ak
+                          name:
+                            get_attribute:
+                              - huaweiair-config
+                              - refName
+                    - name: SK
+                      valueFrom:
+                        configMapKeyRef:
+                          key: sk
+                          name:
+                            get_attribute:
+                              - huaweiair-config
+                              - refName
+                    - name: JAR_NAME
+                      value: acmeair-booking-service
+                    - name: JAVA_OPTS
+                      valueFrom:
+                        configMapKeyRef:
+                          key: java_opts
+                          name:
+                            get_attribute:
+                              - huaweiair-config
+                              - refName
+                  image:
+                    get_in_map:
+                      - region_map
+                      - get_input: HuaweiCloud.Region
+                      - booking-image
+                  name: booking-container
+              imagePullSecrets:
+                - name: default-secret
+    requirements:
+      - dependency:
+          node: huaweiair-config
+      - dependency:
+          node: mongo-service
+    type: HuaweiCloud.CCE.Deployment
+  customer:
+    metadata:
+      Designer:
+        id: 4cc6d116-ee2c-44ab-b88a-2c7bc7022766
+    properties:
+      k8sManifest:
+        apiVersion: apps/v1
+        kind: Deployment
+        metadata:
+          labels:
+            get_input: customer_name
+          name:
+            get_input: customer_name
+        spec:
+          replicas: 1
+          selector:
+            matchLabels:
+              app:
+                get_input: customer_name
+          template:
+            metadata:
+              labels:
+                app:
+                  get_input: customer_name
+            spec:
+              containers:
+                - env:
+                    - name: AK
+                      valueFrom:
+                        configMapKeyRef:
+                          key: ak
+                          name:
+                            get_attribute:
+                              - huaweiair-config
+                              - refName
+                    - name: SK
+                      valueFrom:
+                        configMapKeyRef:
+                          key: sk
+                          name:
+                            get_attribute:
+                              - huaweiair-config
+                              - refName
+                    - name: JAR_NAME
+                      value: acmeair-customer-service
+                    - name: JAVA_OPTS
+                      valueFrom:
+                        configMapKeyRef:
+                          key: java_opts
+                          name:
+                            get_attribute:
+                              - huaweiair-config
+                              - refName
+                  image:
+                    get_in_map:
+                      - region_map
+                      - get_input: HuaweiCloud.Region
+                      - customer-image
+                  name: customer-container
+              imagePullSecrets:
+                - name: default-secret
+    requirements:
+      - dependency:
+          node: huaweiair-config
+      - dependency:
+          node: mongo-service
+    type: HuaweiCloud.CCE.Deployment
+  huaweiair-config:
+    metadata:
+      Designer:
+        id: f4b5614f-4ee5-44a6-a1bb-03d76f981892
+    properties:
+      data:
+        ak:
+          concat:
+            - '-DAPPLICATION_ID='
+            - get_input: appId
+            - ' -Dcse.credentials.accessKey='
+            - get_input: AK
+        java_opts:
+          concat:
+            - '-Dspring.profiles.active=mongodb '
+            - '-Dspring.data.mongodb.host=mongodb '
+            - '-Dspring.data.mongodb.port='
+            - get_input: mongo_port
+        sk:
+          concat:
+            - '-Dcse.credentials.secretKey='
+            - get_input: SK
+    type: HuaweiCloud.CCE.ConfigMap
+  mongo:
+    metadata:
+      Designer:
+        id: f941b656-a0a1-41b4-a6de-3533427acbc7
+    properties:
+      k8sManifest:
+        apiVersion: apps/v1
+        kind: Deployment
+        metadata:
+          labels:
+            get_input: mongo_name
+          name:
+            get_input: mongo_name
+        spec:
+          replicas: 1
+          selector:
+            matchLabels:
+              app:
+                get_input: mongo_name
+          template:
+            metadata:
+              labels:
+                app:
+                  get_input: mongo_name
+            spec:
+              containers:
+                - image:
+                    get_in_map:
+                      - region_map
+                      - get_input: HuaweiCloud.Region
+                      - mongo-image
+                  name: mongo-container
+              imagePullSecrets:
+                - name: default-secret
+    requirements:
+      - dependency:
+          node: huaweiair-config
+    type: HuaweiCloud.CCE.Deployment
+  mongo-service:
+    metadata:
+      Designer:
+        id: 6c6bb9f7-24b5-4a11-87cb-8bfbff9764a7
+    properties:
+      k8sManifest:
+        apiVersion: v1
+        kind: Service
+        metadata:
+          labels:
+            app:
+              get_input: mongo_name
+          name:
+            get_input: mongo_name
+        spec:
+          ports:
+            - name: mongodb
+              port: 32717
+              protocol: TCP
+              targetPort: 27017
+          selector:
+            app:
+              get_input: mongo_name
+          type: ClusterIP
+    requirements:
+      - dependency:
+          node: mongo
+    type: HuaweiCloud.CCE.Service
+  website:
+    metadata:
+      Designer:
+        id: eb7f2925-4a36-4612-9cab-379154e7f0b9
+    properties:
+      k8sManifest:
+        apiVersion: apps/v1
+        kind: Deployment
+        metadata:
+          labels:
+            app:
+              get_input: website_name
+          name:
+            get_input: website_name
+        spec:
+          replicas: 1
+          selector:
+            matchLabels:
+              app:
+                get_input: website_name
+          template:
+            metadata:
+              labels:
+                app:
+                  get_input: website_name
+            spec:
+              containers:
+                - env:
+                    - name: AK
+                      valueFrom:
+                        configMapKeyRef:
+                          key: ak
+                          name:
+                            get_attribute:
+                              - huaweiair-config
+                              - refName
+                    - name: SK
+                      valueFrom:
+                        configMapKeyRef:
+                          key: sk
+                          name:
+                            get_attribute:
+                              - huaweiair-config
+                              - refName
+                    - name: JAR_NAME
+                      value: acmeair-webapp
+                    - name: JAVA_OPTS
+                      value: '-Dspring.profiles.active=sc'
+                  image:
+                    get_in_map:
+                      - region_map
+                      - get_input: HuaweiCloud.Region
+                      - website-image
+                  name: website-container
+                  ports:
+                    - containerPort: 8080
+                      protocol: TCP
+              imagePullSecrets:
+                - name: default-secret
+    requirements:
+      - dependency:
+          node: huaweiair-config
+    type: HuaweiCloud.CCE.Deployment
+  website-service:
+    metadata:
+      Designer:
+        id: e5d7b724-a065-4684-be1c-49994270db82
+    properties:
+      k8sManifest:
+        apiVersion: v1
+        kind: Service
+        metadata:
+          labels:
+            app:
+              get_input: website_name
+          name:
+            get_input: website_name
+        spec:
+          ports:
+            - name:
+                get_input: website_name
+              nodePort:
+                get_input: website_port
+              port: 8080
+              protocol: TCP
+              targetPort: 8080
+          selector:
+            app:
+              get_input: website_name
+          type: NodePort
+    requirements:
+      - dependency:
+          node: website
+    type: HuaweiCloud.CCE.Service
+outputs: {}
+tosca_definitions_version: huaweicloud_tosca_version_1_0
