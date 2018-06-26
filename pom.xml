@@ -87,23 +87,9 @@
       -->
       <dependencies>
         <dependency>
-          <groupId>com.huawei.paas.cse</groupId>
-          <artifactId>foundation-auth</artifactId>
-          <version>${cse.version}</version>
-          <exclusions>
-            <exclusion>
-              <groupId>org.slf4j</groupId>
-              <artifactId>slf4j-log4j12</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>io.servicecomb</groupId>
-              <artifactId>foundation-config</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>io.servicecomb</groupId>
-              <artifactId>java-chassis-core</artifactId>
-            </exclusion>
-          </exclusions>
+        <groupId>com.huawei.paas.cse</groupId>
+        <artifactId>cse-solution-service-engine</artifactId>
+        <version>${cse.version}</version>
         </dependency>
         <dependency>
           <groupId>com.huawei.paas.cse</groupId>
@@ -123,51 +109,6 @@
         <dependency>
           <groupId>com.huawei.paas.cse</groupId>
           <artifactId>cse-handler-tracing</artifactId>
-          <version>${cse.version}</version>
-          <exclusions>
-            <exclusion>
-              <groupId>io.servicecomb</groupId>
-              <artifactId>foundation-config</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>io.servicecomb</groupId>
-              <artifactId>java-chassis-core</artifactId>
-            </exclusion>
-          </exclusions>
-        </dependency>
-        <dependency>
-          <groupId>com.huawei.paas.cse</groupId>
-          <artifactId>cse-handler-performance-stats</artifactId>
-          <version>${cse.version}</version>
-          <exclusions>
-            <exclusion>
-              <groupId>io.servicecomb</groupId>
-              <artifactId>foundation-config</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>io.servicecomb</groupId>
-              <artifactId>java-chassis-core</artifactId>
-            </exclusion>
-          </exclusions>
-        </dependency>
-        <dependency>
-          <groupId>com.huawei.paas.cse</groupId>
-          <artifactId>cse-handler-cloud-extension</artifactId>
-          <version>${cse.version}</version>
-          <exclusions>
-            <exclusion>
-              <groupId>io.servicecomb</groupId>
-              <artifactId>foundation-config</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>io.servicecomb</groupId>
-              <artifactId>java-chassis-core</artifactId>
-            </exclusion>
-          </exclusions>
-        </dependency>
-        <dependency>
-          <groupId>com.huawei.paas.cse</groupId>
-          <artifactId>cse-handler-tracing-apm</artifactId>
           <version>${cse.version}</version>
           <exclusions>
             <exclusion>
