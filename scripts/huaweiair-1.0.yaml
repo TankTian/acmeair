@@ -1,31 +1,47 @@
 inputs:
-  booking_name:
-    default: huaweiair-booking
-    description: booking服务名称
+  AK:
+    description: 租户ak
     label: huaweiair
-  customer_name:
-    default: huaweiair-customer
-    description: customer服务名称
+  SK:
+    description: 租户sk
     label: huaweiair
   appId:
     default: acmeair
     description: 默认应用名称
     label: huaweiair
-  AK:
-    description: 租户ak
+  booking_image:
+    default: '100.125.0.198:20202/servicestage/huaweiair-booking-service:0.1.1'
+    description: booking服务镜像地址
     label: huaweiair
+  booking_name:
+    default: huaweiair-booking
+    description: booking服务名称
+    label: huaweiair
+  customer_image:
+    default: '100.125.0.198:20202/servicestage/huaweiair-customer-service:0.1.1'
+    description: customer服务镜像地址
+    label: huaweiair
+  customer_name:
+    default: huaweiair-customer
+    description: customer服务名称
+    label: huaweiair
+  mongo_image:
+    default: '100.125.0.198:20202/servicestage/mongo:1.0.0'
+    description: mongodb镜像地址
+    label: mongodb
+  mongo_name:
+    default: mongodb
+    description: mongodb服务名称
+    label: mongodb
   mongo_port:
     default: 32717
     description: mongodb对外暴露访问端口
     label: mongodb
     type: integer
-  SK:
-    description: 租户sk
+  website_image:
+    default: '100.125.0.198:20202/servicestage/huaweiair-website:0.1.1'
+    description: wwebsite服务镜像地址
     label: huaweiair
-  mongo_name:
-    default: mongodb
-    description: mongodb服务名称
-    label: mongodb
   website_name:
     default: huaweiair-website
     description: website服务名称
@@ -35,22 +51,6 @@ inputs:
     description: website服务对外暴露访问端口
     label: huaweiair
     type: integer
-  customer_image:
-    default: '100.125.0.198:20202/servicestage/huaweiair-customer-service:0.1.1'
-    description: customer服务镜像地址
-    label: huaweiair
-  booking_image:
-    default: '100.125.0.198:20202/servicestage/huaweiair-booking-service:0.1.1'
-    description: booking服务镜像地址
-    label: huaweiair
-  website_image:
-    default: '100.125.0.198:20202/servicestage/huaweiair-website:0.1.1'
-    description: wwebsite服务镜像地址
-    label: huaweiair
-  mmongo_image:
-    default: '100.125.0.198:20202/servicestage/mongo:1.0.0'
-    description: mongodb镜像地址
-    label: mongodb
 metadata:
   Designer:
     4cc6d116-ee2c-44ab-b88a-2c7bc7022766:
@@ -123,49 +123,49 @@ metadata:
       z: 1
       dependson:
         - f4b5614f-4ee5-44a6-a1bb-03d76f981892
-    1ba5de04-3150-4b25-8762-bf109262c376:
+    646ecc2c-c874-4a4e-a18c-2a1acd1bdafd:
       source:
         id: eb7f2925-4a36-4612-9cab-379154e7f0b9
       target:
         id: f4b5614f-4ee5-44a6-a1bb-03d76f981892
       z: 1
-    b0ad9d29-6234-42fe-97a4-550971fe7106:
+    9db2cdbf-3810-4fd7-9d91-c30f2a3165c9:
       source:
         id: e5d7b724-a065-4684-be1c-49994270db82
       target:
         id: eb7f2925-4a36-4612-9cab-379154e7f0b9
       z: 1
-    82774f9b-d339-4b49-84c9-109efa9879c0:
+    6c6884c4-1918-4d02-8677-0de196b736e8:
       source:
         id: f941b656-a0a1-41b4-a6de-3533427acbc7
       target:
         id: f4b5614f-4ee5-44a6-a1bb-03d76f981892
       z: 1
-    c803e53f-83a2-48cc-942b-d11bde57edf5:
+    eba6e9b1-d845-4b84-88c1-24c4e9085eb3:
       source:
         id: 6c6bb9f7-24b5-4a11-87cb-8bfbff9764a7
       target:
         id: f941b656-a0a1-41b4-a6de-3533427acbc7
       z: 1
-    f419d825-0095-45bb-9a93-bd9127f6818c:
+    3365a469-2b9f-44db-b182-71c53cd3d640:
       source:
         id: 4cc6d116-ee2c-44ab-b88a-2c7bc7022766
       target:
         id: f4b5614f-4ee5-44a6-a1bb-03d76f981892
       z: 1
-    84cd0814-bc48-4b6e-b940-5f93d69c53ef:
+    9866ab2f-61f8-4082-9346-6a257e6a7869:
       source:
         id: 4cc6d116-ee2c-44ab-b88a-2c7bc7022766
       target:
         id: 6c6bb9f7-24b5-4a11-87cb-8bfbff9764a7
       z: 1
-    1efaf2cc-8d5d-440d-b16a-92b424485d0f:
+    4e83afd7-4095-4ee6-901b-686db095180c:
       source:
         id: e3b32c8b-3970-47f9-b298-991fda2a1499
       target:
         id: f4b5614f-4ee5-44a6-a1bb-03d76f981892
       z: 1
-    d27f278f-9899-4072-b43c-3a6a63ced10d:
+    52c5f81d-c812-446a-953c-45626a8e040a:
       source:
         id: e3b32c8b-3970-47f9-b298-991fda2a1499
       target:
@@ -209,7 +209,8 @@ node_templates:
         kind: Deployment
         metadata:
           labels:
-            get_input: booking_name
+            app:
+              get_input: booking_name
           name:
             get_input: booking_name
         spec:
@@ -273,7 +274,8 @@ node_templates:
         kind: Deployment
         metadata:
           labels:
-            get_input: customer_name
+            app:
+              get_input: customer_name
           name:
             get_input: customer_name
         spec:
@@ -360,7 +362,8 @@ node_templates:
         kind: Deployment
         metadata:
           labels:
-            get_input: mongo_name
+            app:
+              get_input: mongo_name
           name:
             get_input: mongo_name
         spec:
@@ -377,7 +380,7 @@ node_templates:
             spec:
               containers:
                 - image:
-                    get_input: mmongo_image
+                    get_input: mongo_image
                   name: mongo-container
               imagePullSecrets:
                 - name: default-secret
