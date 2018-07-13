@@ -15,7 +15,7 @@
 *******************************************************************************/
 package com.acmeair.hystrix;
 
-import io.servicecomb.provider.springmvc.reference.RestTemplateBuilder;
+import org.apache.servicecomb.provider.springmvc.reference.RestTemplateBuilder;
 import java.util.HashMap;
 import java.util.Map;
 import org.slf4j.Logger;

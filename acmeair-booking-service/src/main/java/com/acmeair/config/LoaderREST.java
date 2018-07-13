@@ -24,7 +24,7 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import com.acmeair.loader.Loader;
-import io.servicecomb.provider.rest.common.RestSchema;
+import org.apache.servicecomb.provider.rest.common.RestSchema;
 
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
