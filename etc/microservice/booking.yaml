@@ -5,14 +5,14 @@ service_description:
 cse:
   service:
     registry:
-      address: https://cse.cn-north-1.myhwclouds.com:443
+      address: https://cse.cn-north-1.myhuaweicloud.com:443
       instance:
         watch: false
   rest:
     address: 0.0.0.0:7003
   monitor:
     client:
-      serverUri: https://cse.cn-north-1.myhwclouds.com:443
+      serverUri: https://cse.cn-north-1.myhuaweicloud.com:443
   handler:
     chain:
       Provider:
@@ -25,7 +25,7 @@ cse:
       transport: rest
   config:
     client:
-      serverUri: https://cse.cn-north-1.myhwclouds.com:443
+      serverUri: https://cse.cn-north-1.myhuaweicloud.com:443
       refreshMode: 1
       refresh_interval: 5000
   credentials:
