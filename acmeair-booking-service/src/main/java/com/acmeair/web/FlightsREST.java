@@ -34,7 +34,7 @@ import com.acmeair.entities.Flight;
 import com.acmeair.service.FlightService;
 import com.acmeair.web.dto.TripFlightOptions;
 import com.acmeair.web.dto.TripLegInfo;
-import io.servicecomb.provider.rest.common.RestSchema;
+import org.apache.servicecomb.provider.rest.common.RestSchema;
 
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
