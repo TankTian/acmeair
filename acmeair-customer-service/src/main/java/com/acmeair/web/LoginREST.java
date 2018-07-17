@@ -83,7 +83,7 @@ public class LoginREST {
 
     @GET
     @Path("/logout")
-    @Produces("text/plain")
+    @Produces(MediaType.APPLICATION_JSON)
     @ApiResponses(value = { @ApiResponse(code = 500, message = "CustomerService Internal Server Error") })
     public String logout(@QueryParam("login") String login, @CookieParam("sessionid") String sessionid) {
         try {
