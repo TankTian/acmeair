@@ -66,7 +66,6 @@ public class CustomerConfiguration {
     })
     public long countCustomerSessions() {
         try {
-
             return customerService.countSessions();
         } catch (Exception e) {
             e.printStackTrace();
