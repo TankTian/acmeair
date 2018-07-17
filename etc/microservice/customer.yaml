@@ -10,8 +10,6 @@ cse:
         watch: false
   rest:
     address: 0.0.0.0:7002?sslEnabled=false
-  highway:
-    address: 0.0.0.0:6002?sslEnabled=false
   monitor:
     client:
       serverUri: https://cse.cn-north-1.myhuaweicloud.com:443
