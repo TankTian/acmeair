@@ -21,7 +21,7 @@ import com.acmeair.entities.Customer.PhoneType;
 import com.acmeair.entities.CustomerAddress;
 import com.acmeair.morphia.entities.CustomerAddressImpl;
 import com.acmeair.service.CustomerService;
-import io.servicecomb.provider.rest.common.RestSchema;
+import org.apache.servicecomb.provider.rest.common.RestSchema;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

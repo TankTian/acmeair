@@ -22,8 +22,8 @@ import com.acmeair.entities.CustomerSession;
 import com.acmeair.entities.TokenInfo;
 import com.acmeair.service.CustomerService;
 import com.acmeair.web.dto.CustomerSessionInfo;
-import io.servicecomb.provider.rest.common.RestSchema;
-import io.servicecomb.swagger.invocation.exception.InvocationException;
+import org.apache.servicecomb.provider.rest.common.RestSchema;
+import org.apache.servicecomb.swagger.invocation.exception.InvocationException;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import javax.ws.rs.Consumes;
@@ -83,7 +83,7 @@ public class LoginREST {
 
     @GET
     @Path("/logout")
-    @Produces("text/plain")
+    @Produces(MediaType.APPLICATION_JSON)
     @ApiResponses(value = { @ApiResponse(code = 500, message = "CustomerService Internal Server Error") })
     public String logout(@QueryParam("login") String login, @CookieParam("sessionid") String sessionid) {
         try {
