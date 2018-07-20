@@ -58,8 +58,8 @@ metadata:
         width: 60
         height: 60
       position:
-        x: 310
-        y: 90
+        x: 230
+        y: 110
       z: 1
       dependson:
         - 6c6bb9f7-24b5-4a11-87cb-8bfbff9764a7
@@ -69,8 +69,8 @@ metadata:
         width: 60
         height: 60
       position:
-        x: 220
-        y: 40
+        x: 110
+        y: 30
       z: 1
       dependson:
         - f941b656-a0a1-41b4-a6de-3533427acbc7
@@ -79,8 +79,8 @@ metadata:
         width: 60
         height: 60
       position:
-        x: 220
-        y: 140
+        x: 230
+        y: 210
       z: 1
       dependson:
         - f4b5614f-4ee5-44a6-a1bb-03d76f981892
@@ -90,8 +90,8 @@ metadata:
         width: 60
         height: 60
       position:
-        x: 170
-        y: 210
+        x: 110
+        y: 290
       z: 1
       dependson:
         - eb7f2925-4a36-4612-9cab-379154e7f0b9
@@ -100,8 +100,8 @@ metadata:
         width: 60
         height: 60
       position:
-        x: 60
-        y: 210
+        x: 230
+        y: 290
       z: 1
       dependson:
         - f4b5614f-4ee5-44a6-a1bb-03d76f981892
@@ -110,66 +110,103 @@ metadata:
         width: 60
         height: 60
       position:
-        x: 0
-        y: 40
+        x: 110
+        y: 110
       z: 1
     f941b656-a0a1-41b4-a6de-3533427acbc7:
       size:
         width: 60
         height: 60
       position:
-        x: 110
-        y: 40
+        x: 230
+        y: 30
       z: 1
       dependson:
         - f4b5614f-4ee5-44a6-a1bb-03d76f981892
-    646ecc2c-c874-4a4e-a18c-2a1acd1bdafd:
+    7dfbf088-08f3-4c84-b9af-0e276cbee3b9:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 360
+        y: 160
+      z: 1
+      policy:
+        - f941b656-a0a1-41b4-a6de-3533427acbc7
+        - 4cc6d116-ee2c-44ab-b88a-2c7bc7022766
+        - e3b32c8b-3970-47f9-b298-991fda2a1499
+        - eb7f2925-4a36-4612-9cab-379154e7f0b9
+    763188bc-0d3a-49f5-b08d-64ecc37507b6:
       source:
         id: eb7f2925-4a36-4612-9cab-379154e7f0b9
       target:
         id: f4b5614f-4ee5-44a6-a1bb-03d76f981892
       z: 1
-    9db2cdbf-3810-4fd7-9d91-c30f2a3165c9:
+    7f3c1847-e1f2-4414-a34f-1a7903c1bad5:
       source:
         id: e5d7b724-a065-4684-be1c-49994270db82
       target:
         id: eb7f2925-4a36-4612-9cab-379154e7f0b9
       z: 1
-    6c6884c4-1918-4d02-8677-0de196b736e8:
+    473cb0e9-d272-40a8-b3c5-0c5fbcf0e7c4:
       source:
         id: f941b656-a0a1-41b4-a6de-3533427acbc7
       target:
         id: f4b5614f-4ee5-44a6-a1bb-03d76f981892
       z: 1
-    eba6e9b1-d845-4b84-88c1-24c4e9085eb3:
+    09f40c7c-7748-4730-a049-6ed4b63d1bbe:
       source:
         id: 6c6bb9f7-24b5-4a11-87cb-8bfbff9764a7
       target:
         id: f941b656-a0a1-41b4-a6de-3533427acbc7
       z: 1
-    3365a469-2b9f-44db-b182-71c53cd3d640:
+    822de608-7316-48f9-b287-613e4b6c39df:
       source:
         id: 4cc6d116-ee2c-44ab-b88a-2c7bc7022766
       target:
         id: f4b5614f-4ee5-44a6-a1bb-03d76f981892
       z: 1
-    9866ab2f-61f8-4082-9346-6a257e6a7869:
+    a908e341-32ba-449c-963b-327548b9a5b8:
       source:
         id: 4cc6d116-ee2c-44ab-b88a-2c7bc7022766
       target:
         id: 6c6bb9f7-24b5-4a11-87cb-8bfbff9764a7
       z: 1
-    4e83afd7-4095-4ee6-901b-686db095180c:
+    2bb58751-385f-4b7e-8f97-c44bbbc8e8f8:
       source:
         id: e3b32c8b-3970-47f9-b298-991fda2a1499
       target:
         id: f4b5614f-4ee5-44a6-a1bb-03d76f981892
       z: 1
-    52c5f81d-c812-446a-953c-45626a8e040a:
+    45e6722c-3603-4713-9f3b-5a8e9ad53702:
       source:
         id: e3b32c8b-3970-47f9-b298-991fda2a1499
       target:
         id: 6c6bb9f7-24b5-4a11-87cb-8bfbff9764a7
+      z: 1
+    0b07043c-4b37-4fab-89f1-660b8c6afb45:
+      source:
+        id: 7dfbf088-08f3-4c84-b9af-0e276cbee3b9
+      target:
+        id: f941b656-a0a1-41b4-a6de-3533427acbc7
+      z: 1
+    4a6244af-1a5f-4f83-9b6c-f30704972728:
+      source:
+        id: 7dfbf088-08f3-4c84-b9af-0e276cbee3b9
+      target:
+        id: 4cc6d116-ee2c-44ab-b88a-2c7bc7022766
+      z: 1
+    5272029d-f8d9-45eb-9d50-c9e1aeb1633b:
+      source:
+        id: 7dfbf088-08f3-4c84-b9af-0e276cbee3b9
+      target:
+        id: e3b32c8b-3970-47f9-b298-991fda2a1499
+      z: 1
+    2fdf8605-d13c-43f6-a38b-e727d9d7c879:
+      source:
+        id: 7dfbf088-08f3-4c84-b9af-0e276cbee3b9
+      target:
+        id: eb7f2925-4a36-4612-9cab-379154e7f0b9
       z: 1
   relationships:
     4cc6d116-ee2c-44ab-b88a-2c7bc7022766:
@@ -198,6 +235,13 @@ metadata:
       references:
         dependency:
           get_reference: huaweiair-config
+    7dfbf088-08f3-4c84-b9af-0e276cbee3b9:
+      references:
+        targets:
+          - mongo
+          - customer
+          - booking
+          - website
 node_templates:
   booking:
     metadata:
@@ -509,3 +553,17 @@ node_templates:
     type: HuaweiCloud.CCE.Service
 outputs: {}
 tosca_definitions_version: huaweicloud_tosca_version_1_0
+policies:
+  huaweiair-apm:
+    type: HuaweiCloud.APM.Pinpoint
+    properties:
+      name:
+        get_input: HuaweiCloud.StackName
+    metadata:
+      Designer:
+        id: 7dfbf088-08f3-4c84-b9af-0e276cbee3b9
+    targets:
+      - mongo
+      - customer
+      - booking
+      - website
