@@ -34,7 +34,7 @@
 	<dependencies>
 		<!-- cse -->
 		<dependency>
-			<groupId>io.servicecomb</groupId>
+			<groupId>org.apache.servicecomb</groupId>
 			<artifactId>spring-boot-starter-provider</artifactId>
 		</dependency>
 		<!-- cse -->
@@ -51,7 +51,7 @@
 			<artifactId>acmeair-loader</artifactId>
 			<exclusions>
 				<exclusion>
-					<groupId>io.servicecomb</groupId>
+					<groupId>org.apache.servicecomb</groupId>
 					<artifactId>*</artifactId>
 				</exclusion>
 			</exclusions>
