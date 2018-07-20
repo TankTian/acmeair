@@ -10,7 +10,7 @@ inputs:
     description: 默认应用名称
     label: huaweiair
   booking_image:
-    default: '100.125.0.198:20202/servicestage/huaweiair-booking-service:0.1.1'
+    default: '100.125.0.198:20202/servicestage/huaweiair-booking-service:1.0.0-m1-01'
     description: booking服务镜像地址
     label: huaweiair
   booking_name:
@@ -18,7 +18,7 @@ inputs:
     description: booking服务名称
     label: huaweiair
   customer_image:
-    default: '100.125.0.198:20202/servicestage/huaweiair-customer-service:0.1.1'
+    default: '100.125.0.198:20202/servicestage/huaweiair-customer-service:1.0.0-m1-01'
     description: customer服务镜像地址
     label: huaweiair
   customer_name:
@@ -39,7 +39,7 @@ inputs:
     label: mongodb
     type: integer
   website_image:
-    default: '100.125.0.198:20202/servicestage/huaweiair-website:0.1.1'
+    default: '100.125.0.198:20202/servicestage/huaweiair-website:1.0.0-m1-01'
     description: wwebsite服务镜像地址
     label: huaweiair
   website_name:
